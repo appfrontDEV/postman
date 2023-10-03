@@ -1,0 +1,111 @@
+{
+	"info": {
+		"_postman_id": "e6530dfb-0632-4706-bb18-e4d1155f4695",
+		"name": "503 UM CASH CLOSURE",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Cash sheet closure 903",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "840164d0-6575-47ff-b9e7-fef4a4f03586",
+						"exec": [
+							"// response status test",
+							"pm.test(\"API working!\", function () {",
+							"    pm.response.to.have.status(201);",
+							"});",
+							"pm.test(\"Expected start_cash_in\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"start_cash_in\");",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"id": "76b993d5-4679-4212-ad7d-e1a5288f942c",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "x-apikey",
+						"value": "ac47bee8-1c27-40a1-ba5c-6cd0a1b71521",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"agenzia\":\"903\"\n}"
+				},
+				"url": "https://lb-unicorn-manager-external.appfront.cloud:4443/cash-sheet/final-closure/"
+			},
+			"response": []
+		},
+		{
+			"name": "Cash sheet closure 987",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "840164d0-6575-47ff-b9e7-fef4a4f03586",
+						"exec": [
+							"// response status test",
+							"pm.test(\"API working!\", function () {",
+							"    pm.response.to.have.status(201);",
+							"});",
+							"pm.test(\"Expected start_cash_in\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"start_cash_in\");",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"id": "95d09fb4-4ab8-4529-a4e6-2665b3a88009",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "x-apikey",
+						"value": "ac47bee8-1c27-40a1-ba5c-6cd0a1b71521",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"agenzia\":\"987\"\n}"
+				},
+				"url": "https://lb-unicorn-manager-external.appfront.cloud:4443/cash-sheet/final-closure/"
+			},
+			"response": []
+		}
+	]
+}
