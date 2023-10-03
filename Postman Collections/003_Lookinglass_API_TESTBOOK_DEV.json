@@ -10450,71 +10450,86 @@
 	],
 	"variable": [
 		{
+			"id": "54d5a7f6-2bb8-4f83-b194-602eacf63533",
 			"key": "base_url_local",
 			"value": "http://localhost:8000"
 		},
 		{
+			"id": "78052a75-350e-4e89-926d-fc36dc1a3863",
 			"key": "base_url",
 			"value": "https://lookinglass-dev.appfront.cloud"
 		},
 		{
+			"id": "dda945e6-98d3-489b-888f-6f722bc1ecb6",
 			"key": "base_url_api_gateway",
 			"value": "https://api.appfront.cloud/lookinglass/unsecure"
 		},
 		{
+			"id": "e4a5ad75-141f-4201-bfcc-3e076f668770",
 			"key": "base_url_staging",
 			"value": "https://unicorn006.appfront.cloud"
 		},
 		{
+			"id": "5c65d3ff-cefe-4962-a0b8-ade4e3177b39",
 			"key": "base_url_prod",
 			"value": "http://lookinglass01.ipagency.it"
 		},
 		{
+			"id": "7533ce47-1ea3-4552-a359-a2d8fcad07ea",
 			"key": "base_url_plain",
 			"value": "http://lookinglass-dev.appfront.cloud:446",
 			"type": "string"
 		},
 		{
+			"id": "ff49ee22-a05a-4507-a84c-53a9e1cf8bda",
 			"key": "prod_url_lg",
 			"value": "https://lb-unicorn-manager-external.appfront.cloud:4442",
 			"type": "string"
 		},
 		{
+			"id": "1d22e20c-51b3-42ec-ab93-d154c50a2284",
 			"key": "AccessToken",
 			"value": "",
 			"type": "string"
 		},
 		{
+			"id": "6e34bfb8-981c-4c61-910e-a452bd3390f3",
 			"key": "CardIdSinistro",
 			"value": "",
 			"type": "string"
 		},
 		{
+			"id": "e740282f-0d51-4aa0-8698-de5bc263cb91",
 			"key": "CardTipoVeicolo1",
 			"value": "",
 			"type": "string"
 		},
 		{
+			"id": "8a2eceea-da40-4acd-ae19-dda00facbb27",
 			"key": "CardTipoVeicolo2",
 			"value": "",
 			"type": "string"
 		},
 		{
+			"id": "1d47e606-3649-47e7-bbe7-fb7c13d49b44",
 			"key": "CardTargaVeicolo1",
 			"value": "",
 			"type": "string"
 		},
 		{
+			"id": "a3e54bd1-fbcc-4513-af93-fa27b6914019",
 			"key": "CardTargaVeicolo2",
 			"value": "",
 			"type": "string"
 		},
 		{
+			"id": "a7ad3ad6-a487-4d37-8071-354c4c157fd4",
 			"key": "CardDataSinistro",
 			"value": "",
 			"type": "string"
 		},
 		{
+			"id": "506f0d1b-00dd-45d4-b0c9-fe46bcd2efc4",
 			"key": "lookinglass",
 			"value": ""
 		}
