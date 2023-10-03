@@ -1,0 +1,527 @@
+{
+	"info": {
+		"_postman_id": "e81b2e56-8327-425e-b734-a1802002ecd6",
+		"name": "502 Facile MONITORING AUTOMATED",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Quotation request",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "4d376346-90fa-4ba9-91d0-a384abf8e900",
+						"exec": [
+							"// response status test\r",
+							"pm.test(\"API working!\", function () {\r",
+							"    pm.response.to.have.status(201);\r",
+							"});\r",
+							"pm.test(\"Expected package_1\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"package_1\");\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "6b0e5f58-79b8-4161-8ba6-c943910b3c35",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"id": "b30a45bc-abff-44f5-8fc5-5db65feadbcf",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"description": "(Required) Quotation type (manual or automatic)",
+						"key": "X-Facile-QuoteTrigger",
+						"value": "automatic"
+					},
+					{
+						"description": "(Required) Channel from which the request comes (web or fp)",
+						"key": "X-Facile-Channel",
+						"value": "web"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "eTmR8QWEuVZVedsp!",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "x-apikey",
+						"value": "0d96637f-66da-4e07-8c48-20213292391c",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "{{AccessToken}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{{facileRequest}}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://unicorn100.appfront.cloud:4000/api/quotes"
+			},
+			"response": [
+				{
+					"id": "9f3070f9-0475-40cb-96a3-e9010057dff9",
+					"name": "Quotation created",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"description": "Added as a part of security scheme: apikey",
+								"key": "x-apikey",
+								"value": "<API Key>"
+							},
+							{
+								"description": "(Required) Quotation type (manual or automatic)",
+								"key": "X-Facile-QuoteTrigger",
+								"value": "adipisicing non"
+							},
+							{
+								"description": "(Required) Channel from which the request comes (web or fp)",
+								"key": "X-Facile-Channel",
+								"value": "adipisicing non"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"contractor\": {\n    \"gender\": \"sint in dolore q\",\n    \"is_principal_driver\": false,\n    \"residential_address\": {\n      \"address\": \"ad\",\n      \"address_number\": \"d\",\n      \"city\": {\n        \"istat\": \"magna enim est veniam\"\n      },\n      \"zip_code\": \"ut\"\n    },\n    \"first_name\": \"veniam ut pariatur ullamco sed\",\n    \"last_name\": \"nulla dolore eiusmod qui\",\n    \"company_name\": \"sint irure ipsu\",\n    \"company_type\": \"occaecat laborum Duis\",\n    \"vat\": \"Ut aute\",\n    \"fiscal_code\": \"irure reprehenderit aliqua\",\n    \"birth_date\": \"1951-11-25\",\n    \"city_of_birth\": {\n      \"istat\": \"laborum dolor enim \"\n    },\n    \"country_of_birth\": \"consectetur ut\",\n    \"home_address\": {\n      \"address\": \"id ut\",\n      \"address_number\": \"ad in ma\",\n      \"city\": {\n        \"istat\": \"aliquip nisi et\"\n      },\n      \"zip_code\": \"consectetur\"\n    },\n    \"civil_status\": \"ut\",\n    \"qualification\": \"pariatur elit enim aliquip\",\n    \"occupation\": \"elit\",\n    \"license_year\": \"velit laboris in sint\"\n  },\n  \"effective_date\": \"1988-08-03\",\n  \"insurance_type\": \"deserunt eu incididunt nostrud\",\n  \"owner\": {\n    \"gender\": \"laboris ve\",\n    \"is_principal_driver\": true,\n    \"residential_address\": {\n      \"address\": \"anim Ut in\",\n      \"address_number\": \"sint elit aute et\",\n      \"city\": {\n        \"istat\": \"non ipsum proident\"\n      },\n      \"zip_code\": \"ad proi\"\n    },\n    \"first_name\": \"in non deserunt quis\",\n    \"last_name\": \"ad sint et\",\n    \"company_name\": \"reprehenderit\",\n    \"company_type\": \"anim nostrud sint\",\n    \"vat\": \"fugiat Duis velit\",\n    \"fiscal_code\": \"eiusmod in laboris in\",\n    \"birth_date\": \"1968-06-02\",\n    \"city_of_birth\": {\n      \"istat\": \"consectetur in laborum sed\"\n    },\n    \"country_of_birth\": \"au\",\n    \"home_address\": {\n      \"address\": \"cupidatat id veniam\",\n      \"address_number\": \"eiusmod\",\n      \"city\": {\n        \"istat\": \"laborum elit pariatur ut\"\n      },\n      \"zip_code\": \"consectetur nostrud\"\n    },\n    \"civil_status\": \"ea veniam eiusmod\",\n    \"qualification\": \"dolore Excepteur ad\",\n    \"occupation\": \"culpa\",\n    \"license_year\": \"laborum\"\n  },\n  \"quote_vehicle_type\": \"ad incididunt sed non\",\n  \"vehicle\": {\n    \"antitheft\": \"enim minim do est\",\n    \"finiture\": {\n      \"code\": \"id\",\n      \"month\": \"pariat\",\n      \"year\": \"incididunt Ut\"\n    },\n    \"plate_number\": \"aliquip laboris velit et\",\n    \"power_source\": \"officia\",\n    \"purchase_date\": \"1963-03-22\",\n    \"registration_date\": \"2017-03-09\",\n    \"third_party_usage\": true,\n    \"with_towbar\": false,\n    \"main_use\": \"eu dolore culpa\",\n    \"shelter\": \"adipisicing consequat\",\n    \"year_mileage\": \"laboris nulla occaecat\",\n    \"value\": \"proident magna mollit\",\n    \"mass_over_35q\": false\n  },\n  \"driver\": {\n    \"gender\": \"veniam commodo\",\n    \"is_principal_driver\": true,\n    \"residential_address\": {\n      \"address\": \"sed laborum consequat\",\n      \"address_number\": \"ex deserunt\",\n      \"city\": {\n        \"istat\": \"dolo\"\n      },\n      \"zip_code\": \"deserunt in\"\n    },\n    \"first_name\": \"culpa dolor\",\n    \"last_name\": \"proident Duis\",\n    \"company_name\": \"sit velit elit qui exercitation\",\n    \"company_type\": \"quis ea\",\n    \"vat\": \"dolor laborum elit\",\n    \"fiscal_code\": \"L\",\n    \"birth_date\": \"1956-03-07\",\n    \"city_of_birth\": {\n      \"istat\": \"in aliquip incididunt\"\n    },\n    \"country_of_birth\": \"sed\",\n    \"home_address\": {\n      \"address\": \"magna ea elit\",\n      \"address_number\": \"ad eu nulla ea\",\n      \"city\": {\n        \"istat\": \"anim f\"\n      },\n      \"zip_code\": \"exercitation\"\n    },\n    \"civil_status\": \"dolore tempor\",\n    \"qualification\": \"consectetur Lorem cupidatat aliqua\",\n    \"occupation\": \"Lorem sit labore ut\",\n    \"license_year\": \"sint culpa\"\n  },\n  \"youngest_driver_age\": -52753234,\n  \"atr\": {\n    \"cu_class\": \"cillum reprehenderit anim\",\n    \"details\": [\n      {\n        \"year\": -47184635,\n        \"primary_responsibility\": \"eiusmod fugiat occaecat dolore\",\n        \"equal_responsibility\": \"incididunt proident commodo l\",\n        \"no_responsibility\": \"pariatur ut enim\"\n      },\n      {\n        \"year\": 42027030,\n        \"primary_responsibility\": \"sint\",\n        \"equal_responsibility\": \"non laborum fugiat eu\",\n        \"no_responsibility\": \"esse sint in cupidatat\"\n      }\n    ],\n    \"previous_insurance_company\": -5389591\n  },\n  \"inherited_atr\": {\n    \"inheritance_type\": \"aliqua ut in\",\n    \"plate_number\": \"sint cupidatat dolor deserunt\",\n    \"vehicle_type\": \"adipisicing cupidatat id aute\",\n    \"inheritance_figure\": {\n      \"birth_date\": \"1985-11-22\",\n      \"country_of_birth\": \"proident irure reprehenderit nisi\",\n      \"first_name\": \"amet ex\",\n      \"fiscal_code\": \"cupidatat proident occaecat est aliqua\",\n      \"gender\": \"ullamco\",\n      \"last_name\": \"minim\",\n      \"city_of_birth\": {\n        \"istat\": \"anim\"\n      }\n    }\n  }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{baseUrl}}/api/quotes"
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"disabled": false,
+							"description": "Quote id created",
+							"key": "X-Facile-QuoteID",
+							"value": ""
+						},
+						{
+							"disabled": false,
+							"description": "API URL for the GET call of the quote just created",
+							"key": "Location",
+							"value": ""
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"responseTime": null,
+					"body": "{\n  \"quotes\": [\n    {\n      \"product\": {\n        \"product_name\": \"amet elit incididunt\",\n        \"quote_id\": \"reprehenderit occaecat\",\n        \"purchasable\": false,\n        \"guide_type\": \"mollit velit sint pariatur commodo\"\n      },\n      \"packages\": {\n        \"package_1\": [\n          {\n            \"guarantee\": \"labor\",\n            \"annual_premium\": 31259355,\n            \"sixmonth_premium\": 64312505,\n            \"month_premium\": 14829462,\n            \"premium_without_discount\": 98221741,\n            \"mandatory\": false,\n            \"ceiling\": -23836286,\n            \"ceiling2\": -92136233,\n            \"percentage_excess\": -29695691,\n            \"fixed_excess\": -40577386\n          },\n          {\n            \"guarantee\": \"exercitation et minim culpa\",\n            \"annual_premium\": -90641171,\n            \"sixmonth_premium\": -95590970,\n            \"month_premium\": 49501428,\n            \"premium_without_discount\": -92789811,\n            \"mandatory\": true,\n            \"ceiling\": 81348238,\n            \"ceiling2\": 38986527,\n            \"percentage_excess\": 63161635,\n            \"fixed_excess\": -57414102\n          }\n        ],\n        \"package_2\": [\n          {\n            \"guarantee\": \"sunt\",\n            \"annual_premium\": -59892687,\n            \"sixmonth_premium\": -42209687,\n            \"month_premium\": 9695743,\n            \"premium_without_discount\": 51602702,\n            \"mandatory\": false,\n            \"ceiling\": 28426704,\n            \"ceiling2\": 66199178,\n            \"percentage_excess\": 16324392,\n            \"fixed_excess\": 34189967\n          },\n          {\n            \"guarantee\": \"officia labore enim mollit\",\n            \"annual_premium\": -42441455,\n            \"sixmonth_premium\": -167126,\n            \"month_premium\": 7165807,\n            \"premium_without_discount\": -88011324,\n            \"mandatory\": false,\n            \"ceiling\": -27354472,\n            \"ceiling2\": 33201777,\n            \"percentage_excess\": 7374528,\n            \"fixed_excess\": 41577265\n          }\n        ],\n        \"package_3\": [\n          {\n            \"guarantee\": \"eu elit cillum Ut\",\n            \"annual_premium\": -37450673,\n            \"sixmonth_premium\": -14972049,\n            \"month_premium\": -85236992,\n            \"premium_without_discount\": 29926332,\n            \"mandatory\": false,\n            \"ceiling\": 26803175,\n            \"ceiling2\": -20960986,\n            \"percentage_excess\": -38175422,\n            \"fixed_excess\": 2076303\n          },\n          {\n            \"guarantee\": \"pariatur aute sed\",\n            \"annual_premium\": -12137612,\n            \"sixmonth_premium\": 77804845,\n            \"month_premium\": -95618252,\n            \"premium_without_discount\": 92178085,\n            \"mandatory\": false,\n            \"ceiling\": 24277548,\n            \"ceiling2\": 87993358,\n            \"percentage_excess\": 59568999,\n            \"fixed_excess\": -80164846\n          }\n        ],\n        \"package_4\": [\n          {\n            \"guarantee\": \"incididunt consequat\",\n            \"annual_premium\": -2101106,\n            \"sixmonth_premium\": -56860938,\n            \"month_premium\": -92117168,\n            \"premium_without_discount\": 26352118,\n            \"mandatory\": true,\n            \"ceiling\": 35389449,\n            \"ceiling2\": 79303267,\n            \"percentage_excess\": -55977078,\n            \"fixed_excess\": -74371325\n          },\n          {\n            \"guarantee\": \"tempor in dolor\",\n            \"annual_premium\": -42260273,\n            \"sixmonth_premium\": -48520907,\n            \"month_premium\": -65414457,\n            \"premium_without_discount\": -88374694,\n            \"mandatory\": true,\n            \"ceiling\": 72867576,\n            \"ceiling2\": -94515963,\n            \"percentage_excess\": -2141294,\n            \"fixed_excess\": -58604482\n          }\n        ],\n        \"package_5\": [\n          {\n            \"guarantee\": \"eiusmod velit\",\n            \"annual_premium\": 42117797,\n            \"sixmonth_premium\": 7378430,\n            \"month_premium\": -13139645,\n            \"premium_without_discount\": -4200394,\n            \"mandatory\": false,\n            \"ceiling\": 18067498,\n            \"ceiling2\": -15968365,\n            \"percentage_excess\": 79777287,\n            \"fixed_excess\": 79741148\n          },\n          {\n            \"guarantee\": \"ut velit quis tempor\",\n            \"annual_premium\": -36809955,\n            \"sixmonth_premium\": -27819545,\n            \"month_premium\": 12077467,\n            \"premium_without_discount\": 61507558,\n            \"mandatory\": true,\n            \"ceiling\": 76507717,\n            \"ceiling2\": 55269422,\n            \"percentage_excess\": 71819555,\n            \"fixed_excess\": -62094398\n          }\n        ],\n        \"package_6\": [\n          {\n            \"guarantee\": \"ut id exercitation cupidatat nulla\",\n            \"annual_premium\": -85379932,\n            \"sixmonth_premium\": -25824972,\n            \"month_premium\": 59939511,\n            \"premium_without_discount\": -55274418,\n            \"mandatory\": false,\n            \"ceiling\": 72409072,\n            \"ceiling2\": -81250436,\n            \"percentage_excess\": 40127858,\n            \"fixed_excess\": 47139111\n          },\n          {\n            \"guarantee\": \"aute culpa dolor\",\n            \"annual_premium\": -21326112,\n            \"sixmonth_premium\": -9335620,\n            \"month_premium\": -36700199,\n            \"premium_without_discount\": -48906826,\n            \"mandatory\": false,\n            \"ceiling\": -91869371,\n            \"ceiling2\": -36211883,\n            \"percentage_excess\": -98206312,\n            \"fixed_excess\": 43617704\n          }\n        ],\n        \"package_7\": [\n          {\n            \"guarantee\": \"exercitation\",\n            \"annual_premium\": 37985408,\n            \"sixmonth_premium\": -59420728,\n            \"month_premium\": 65672540,\n            \"premium_without_discount\": 96237809,\n            \"mandatory\": false,\n            \"ceiling\": -49530667,\n            \"ceiling2\": 88259695,\n            \"percentage_excess\": -32084074,\n            \"fixed_excess\": -98044611\n          },\n          {\n            \"guarantee\": \"ex amet\",\n            \"annual_premium\": 52361777,\n            \"sixmonth_premium\": -64040602,\n            \"month_premium\": 90089122,\n            \"premium_without_discount\": 26980861,\n            \"mandatory\": false,\n            \"ceiling\": -45806540,\n            \"ceiling2\": -65293062,\n            \"percentage_excess\": 30616052,\n            \"fixed_excess\": 49591142\n          }\n        ],\n        \"package_8\": [\n          {\n            \"guarantee\": \"pariatur\",\n            \"annual_premium\": -83830776,\n            \"sixmonth_premium\": 80773879,\n            \"month_premium\": 8956203,\n            \"premium_without_discount\": 55976605,\n            \"mandatory\": true,\n            \"ceiling\": 10686683,\n            \"ceiling2\": 47658721,\n            \"percentage_excess\": -73399370,\n            \"fixed_excess\": -94454137\n          },\n          {\n            \"guarantee\": \"consequat dolore ex\",\n            \"annual_premium\": 59305998,\n            \"sixmonth_premium\": -45754737,\n            \"month_premium\": -99331768,\n            \"premium_without_discount\": 19243033,\n            \"mandatory\": false,\n            \"ceiling\": 60033664,\n            \"ceiling2\": -36159134,\n            \"percentage_excess\": -85750854,\n            \"fixed_excess\": 82891334\n          }\n        ]\n      }\n    },\n    {\n      \"product\": {\n        \"product_name\": \"fugiat\",\n        \"quote_id\": \"amet aliqua fugiat\",\n        \"purchasable\": false,\n        \"guide_type\": \"aliquip ea nostrud sit\"\n      },\n      \"packages\": {\n        \"package_1\": [\n          {\n            \"guarantee\": \"incididunt\",\n            \"annual_premium\": 80487845,\n            \"sixmonth_premium\": 50371790,\n            \"month_premium\": -11342861,\n            \"premium_without_discount\": 75798116,\n            \"mandatory\": false,\n            \"ceiling\": 45911347,\n            \"ceiling2\": 19913380,\n            \"percentage_excess\": 53521343,\n            \"fixed_excess\": 18124850\n          },\n          {\n            \"guarantee\": \"i\",\n            \"annual_premium\": 85651402,\n            \"sixmonth_premium\": -8752784,\n            \"month_premium\": -83663399,\n            \"premium_without_discount\": -59684595,\n            \"mandatory\": false,\n            \"ceiling\": 59503584,\n            \"ceiling2\": 31948036,\n            \"percentage_excess\": 63735271,\n            \"fixed_excess\": 52710264\n          }\n        ],\n        \"package_2\": [\n          {\n            \"guarantee\": \"pariatur occaecat dolor sed\",\n            \"annual_premium\": -84218204,\n            \"sixmonth_premium\": -78575157,\n            \"month_premium\": 89084157,\n            \"premium_without_discount\": 1774453,\n            \"mandatory\": false,\n            \"ceiling\": 22584406,\n            \"ceiling2\": -59955450,\n            \"percentage_excess\": -49412413,\n            \"fixed_excess\": 28385291\n          },\n          {\n            \"guarantee\": \"cupidatat ea sed ex\",\n            \"annual_premium\": -21807952,\n            \"sixmonth_premium\": -7994389,\n            \"month_premium\": 99100053,\n            \"premium_without_discount\": -83162374,\n            \"mandatory\": false,\n            \"ceiling\": 24651993,\n            \"ceiling2\": 98238186,\n            \"percentage_excess\": -15313622,\n            \"fixed_excess\": 21001603\n          }\n        ],\n        \"package_3\": [\n          {\n            \"guarantee\": \"consequat velit labore aliquip\",\n            \"annual_premium\": -1396339,\n            \"sixmonth_premium\": -79058447,\n            \"month_premium\": -83158764,\n            \"premium_without_discount\": 15439141,\n            \"mandatory\": false,\n            \"ceiling\": -75133249,\n            \"ceiling2\": 3390497,\n            \"percentage_excess\": 34956831,\n            \"fixed_excess\": 81800484\n          },\n          {\n            \"guarantee\": \"Excepteur\",\n            \"annual_premium\": -75053025,\n            \"sixmonth_premium\": 52166509,\n            \"month_premium\": -61060432,\n            \"premium_without_discount\": -32472795,\n            \"mandatory\": true,\n            \"ceiling\": -76105285,\n            \"ceiling2\": -60899204,\n            \"percentage_excess\": 23247312,\n            \"fixed_excess\": -11146312\n          }\n        ],\n        \"package_4\": [\n          {\n            \"guarantee\": \"non ipsu\",\n            \"annual_premium\": -55773950,\n            \"sixmonth_premium\": -41702476,\n            \"month_premium\": -2470185,\n            \"premium_without_discount\": 29131943,\n            \"mandatory\": false,\n            \"ceiling\": 43816259,\n            \"ceiling2\": 17802172,\n            \"percentage_excess\": 37841005,\n            \"fixed_excess\": 28647558\n          },\n          {\n            \"guarantee\": \"quis ad esse do\",\n            \"annual_premium\": 71922575,\n            \"sixmonth_premium\": -16237133,\n            \"month_premium\": 1875749,\n            \"premium_without_discount\": 11874229,\n            \"mandatory\": false,\n            \"ceiling\": -26911314,\n            \"ceiling2\": -10871738,\n            \"percentage_excess\": 26273783,\n            \"fixed_excess\": -48990579\n          }\n        ],\n        \"package_5\": [\n          {\n            \"guarantee\": \"ea deserunt\",\n            \"annual_premium\": 46427694,\n            \"sixmonth_premium\": 22217522,\n            \"month_premium\": -95860053,\n            \"premium_without_discount\": 63048120,\n            \"mandatory\": true,\n            \"ceiling\": -22843453,\n            \"ceiling2\": 36306578,\n            \"percentage_excess\": -99863373,\n            \"fixed_excess\": 35506788\n          },\n          {\n            \"guarantee\": \"pariatur deserunt in Lorem\",\n            \"annual_premium\": -76420715,\n            \"sixmonth_premium\": -28607924,\n            \"month_premium\": -74220007,\n            \"premium_without_discount\": -95166968,\n            \"mandatory\": false,\n            \"ceiling\": 99482919,\n            \"ceiling2\": 93540208,\n            \"percentage_excess\": -43390011,\n            \"fixed_excess\": -80664417\n          }\n        ],\n        \"package_6\": [\n          {\n            \"guarantee\": \"incididunt occaecat aliqua\",\n            \"annual_premium\": -50431284,\n            \"sixmonth_premium\": 7637224,\n            \"month_premium\": 91412830,\n            \"premium_without_discount\": -7442587,\n            \"mandatory\": false,\n            \"ceiling\": -21442746,\n            \"ceiling2\": 40376681,\n            \"percentage_excess\": 6647700,\n            \"fixed_excess\": 6335085\n          },\n          {\n            \"guarantee\": \"enim voluptate iru\",\n            \"annual_premium\": -36420790,\n            \"sixmonth_premium\": -20099069,\n            \"month_premium\": -56375314,\n            \"premium_without_discount\": -85006282,\n            \"mandatory\": true,\n            \"ceiling\": 15717109,\n            \"ceiling2\": -5385281,\n            \"percentage_excess\": 56926479,\n            \"fixed_excess\": 63750257\n          }\n        ],\n        \"package_7\": [\n          {\n            \"guarantee\": \"consectetur sunt conse\",\n            \"annual_premium\": 35202519,\n            \"sixmonth_premium\": -59049087,\n            \"month_premium\": -96649572,\n            \"premium_without_discount\": -40287450,\n            \"mandatory\": true,\n            \"ceiling\": -21190763,\n            \"ceiling2\": 57259939,\n            \"percentage_excess\": -70582254,\n            \"fixed_excess\": -30269463\n          },\n          {\n            \"guarantee\": \"nulla veniam do\",\n            \"annual_premium\": 98886385,\n            \"sixmonth_premium\": 97923931,\n            \"month_premium\": -30798864,\n            \"premium_without_discount\": 13437326,\n            \"mandatory\": false,\n            \"ceiling\": 41932860,\n            \"ceiling2\": -22088646,\n            \"percentage_excess\": 15098249,\n            \"fixed_excess\": 21507641\n          }\n        ],\n        \"package_8\": [\n          {\n            \"guarantee\": \"officia cillum velit incididunt ea\",\n            \"annual_premium\": 85736103,\n            \"sixmonth_premium\": 40958575,\n            \"month_premium\": 73481372,\n            \"premium_without_discount\": -53422234,\n            \"mandatory\": false,\n            \"ceiling\": -34325450,\n            \"ceiling2\": -6032760,\n            \"percentage_excess\": -78324805,\n            \"fixed_excess\": -65868666\n          },\n          {\n            \"guarantee\": \"volup\",\n            \"annual_premium\": 35499623,\n            \"sixmonth_premium\": 52337025,\n            \"month_premium\": 82096596,\n            \"premium_without_discount\": 65110747,\n            \"mandatory\": true,\n            \"ceiling\": 19491939,\n            \"ceiling2\": 7365279,\n            \"percentage_excess\": -19351240,\n            \"fixed_excess\": -12584719\n          }\n        ]\n      }\n    }\n  ]\n}"
+				},
+				{
+					"id": "0f7e6270-f99f-4c13-8976-3def520c4bd9",
+					"name": "Bad Request",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"description": "Added as a part of security scheme: apikey",
+								"key": "x-apikey",
+								"value": "<API Key>"
+							},
+							{
+								"description": "(Required) Quotation type (manual or automatic)",
+								"key": "X-Facile-QuoteTrigger",
+								"value": "adipisicing non"
+							},
+							{
+								"description": "(Required) Channel from which the request comes (web or fp)",
+								"key": "X-Facile-Channel",
+								"value": "adipisicing non"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"contractor\": {\n    \"gender\": \"sint in dolore q\",\n    \"is_principal_driver\": false,\n    \"residential_address\": {\n      \"address\": \"ad\",\n      \"address_number\": \"d\",\n      \"city\": {\n        \"istat\": \"magna enim est veniam\"\n      },\n      \"zip_code\": \"ut\"\n    },\n    \"first_name\": \"veniam ut pariatur ullamco sed\",\n    \"last_name\": \"nulla dolore eiusmod qui\",\n    \"company_name\": \"sint irure ipsu\",\n    \"company_type\": \"occaecat laborum Duis\",\n    \"vat\": \"Ut aute\",\n    \"fiscal_code\": \"irure reprehenderit aliqua\",\n    \"birth_date\": \"1951-11-25\",\n    \"city_of_birth\": {\n      \"istat\": \"laborum dolor enim \"\n    },\n    \"country_of_birth\": \"consectetur ut\",\n    \"home_address\": {\n      \"address\": \"id ut\",\n      \"address_number\": \"ad in ma\",\n      \"city\": {\n        \"istat\": \"aliquip nisi et\"\n      },\n      \"zip_code\": \"consectetur\"\n    },\n    \"civil_status\": \"ut\",\n    \"qualification\": \"pariatur elit enim aliquip\",\n    \"occupation\": \"elit\",\n    \"license_year\": \"velit laboris in sint\"\n  },\n  \"effective_date\": \"1988-08-03\",\n  \"insurance_type\": \"deserunt eu incididunt nostrud\",\n  \"owner\": {\n    \"gender\": \"laboris ve\",\n    \"is_principal_driver\": true,\n    \"residential_address\": {\n      \"address\": \"anim Ut in\",\n      \"address_number\": \"sint elit aute et\",\n      \"city\": {\n        \"istat\": \"non ipsum proident\"\n      },\n      \"zip_code\": \"ad proi\"\n    },\n    \"first_name\": \"in non deserunt quis\",\n    \"last_name\": \"ad sint et\",\n    \"company_name\": \"reprehenderit\",\n    \"company_type\": \"anim nostrud sint\",\n    \"vat\": \"fugiat Duis velit\",\n    \"fiscal_code\": \"eiusmod in laboris in\",\n    \"birth_date\": \"1968-06-02\",\n    \"city_of_birth\": {\n      \"istat\": \"consectetur in laborum sed\"\n    },\n    \"country_of_birth\": \"au\",\n    \"home_address\": {\n      \"address\": \"cupidatat id veniam\",\n      \"address_number\": \"eiusmod\",\n      \"city\": {\n        \"istat\": \"laborum elit pariatur ut\"\n      },\n      \"zip_code\": \"consectetur nostrud\"\n    },\n    \"civil_status\": \"ea veniam eiusmod\",\n    \"qualification\": \"dolore Excepteur ad\",\n    \"occupation\": \"culpa\",\n    \"license_year\": \"laborum\"\n  },\n  \"quote_vehicle_type\": \"ad incididunt sed non\",\n  \"vehicle\": {\n    \"antitheft\": \"enim minim do est\",\n    \"finiture\": {\n      \"code\": \"id\",\n      \"month\": \"pariat\",\n      \"year\": \"incididunt Ut\"\n    },\n    \"plate_number\": \"aliquip laboris velit et\",\n    \"power_source\": \"officia\",\n    \"purchase_date\": \"1963-03-22\",\n    \"registration_date\": \"2017-03-09\",\n    \"third_party_usage\": true,\n    \"with_towbar\": false,\n    \"main_use\": \"eu dolore culpa\",\n    \"shelter\": \"adipisicing consequat\",\n    \"year_mileage\": \"laboris nulla occaecat\",\n    \"value\": \"proident magna mollit\",\n    \"mass_over_35q\": false\n  },\n  \"driver\": {\n    \"gender\": \"veniam commodo\",\n    \"is_principal_driver\": true,\n    \"residential_address\": {\n      \"address\": \"sed laborum consequat\",\n      \"address_number\": \"ex deserunt\",\n      \"city\": {\n        \"istat\": \"dolo\"\n      },\n      \"zip_code\": \"deserunt in\"\n    },\n    \"first_name\": \"culpa dolor\",\n    \"last_name\": \"proident Duis\",\n    \"company_name\": \"sit velit elit qui exercitation\",\n    \"company_type\": \"quis ea\",\n    \"vat\": \"dolor laborum elit\",\n    \"fiscal_code\": \"L\",\n    \"birth_date\": \"1956-03-07\",\n    \"city_of_birth\": {\n      \"istat\": \"in aliquip incididunt\"\n    },\n    \"country_of_birth\": \"sed\",\n    \"home_address\": {\n      \"address\": \"magna ea elit\",\n      \"address_number\": \"ad eu nulla ea\",\n      \"city\": {\n        \"istat\": \"anim f\"\n      },\n      \"zip_code\": \"exercitation\"\n    },\n    \"civil_status\": \"dolore tempor\",\n    \"qualification\": \"consectetur Lorem cupidatat aliqua\",\n    \"occupation\": \"Lorem sit labore ut\",\n    \"license_year\": \"sint culpa\"\n  },\n  \"youngest_driver_age\": -52753234,\n  \"atr\": {\n    \"cu_class\": \"cillum reprehenderit anim\",\n    \"details\": [\n      {\n        \"year\": -47184635,\n        \"primary_responsibility\": \"eiusmod fugiat occaecat dolore\",\n        \"equal_responsibility\": \"incididunt proident commodo l\",\n        \"no_responsibility\": \"pariatur ut enim\"\n      },\n      {\n        \"year\": 42027030,\n        \"primary_responsibility\": \"sint\",\n        \"equal_responsibility\": \"non laborum fugiat eu\",\n        \"no_responsibility\": \"esse sint in cupidatat\"\n      }\n    ],\n    \"previous_insurance_company\": -5389591\n  },\n  \"inherited_atr\": {\n    \"inheritance_type\": \"aliqua ut in\",\n    \"plate_number\": \"sint cupidatat dolor deserunt\",\n    \"vehicle_type\": \"adipisicing cupidatat id aute\",\n    \"inheritance_figure\": {\n      \"birth_date\": \"1985-11-22\",\n      \"country_of_birth\": \"proident irure reprehenderit nisi\",\n      \"first_name\": \"amet ex\",\n      \"fiscal_code\": \"cupidatat proident occaecat est aliqua\",\n      \"gender\": \"ullamco\",\n      \"last_name\": \"minim\",\n      \"city_of_birth\": {\n        \"istat\": \"anim\"\n      }\n    }\n  }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{baseUrl}}/api/quotes"
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "text",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "*/*"
+						}
+					],
+					"cookie": [],
+					"responseTime": null,
+					"body": ""
+				},
+				{
+					"id": "8fa06aa3-e3db-4faf-a317-8194ba4a89c1",
+					"name": "Unauthorized",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"description": "Added as a part of security scheme: apikey",
+								"key": "x-apikey",
+								"value": "<API Key>"
+							},
+							{
+								"description": "(Required) Quotation type (manual or automatic)",
+								"key": "X-Facile-QuoteTrigger",
+								"value": "adipisicing non"
+							},
+							{
+								"description": "(Required) Channel from which the request comes (web or fp)",
+								"key": "X-Facile-Channel",
+								"value": "adipisicing non"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"contractor\": {\n    \"gender\": \"sint in dolore q\",\n    \"is_principal_driver\": false,\n    \"residential_address\": {\n      \"address\": \"ad\",\n      \"address_number\": \"d\",\n      \"city\": {\n        \"istat\": \"magna enim est veniam\"\n      },\n      \"zip_code\": \"ut\"\n    },\n    \"first_name\": \"veniam ut pariatur ullamco sed\",\n    \"last_name\": \"nulla dolore eiusmod qui\",\n    \"company_name\": \"sint irure ipsu\",\n    \"company_type\": \"occaecat laborum Duis\",\n    \"vat\": \"Ut aute\",\n    \"fiscal_code\": \"irure reprehenderit aliqua\",\n    \"birth_date\": \"1951-11-25\",\n    \"city_of_birth\": {\n      \"istat\": \"laborum dolor enim \"\n    },\n    \"country_of_birth\": \"consectetur ut\",\n    \"home_address\": {\n      \"address\": \"id ut\",\n      \"address_number\": \"ad in ma\",\n      \"city\": {\n        \"istat\": \"aliquip nisi et\"\n      },\n      \"zip_code\": \"consectetur\"\n    },\n    \"civil_status\": \"ut\",\n    \"qualification\": \"pariatur elit enim aliquip\",\n    \"occupation\": \"elit\",\n    \"license_year\": \"velit laboris in sint\"\n  },\n  \"effective_date\": \"1988-08-03\",\n  \"insurance_type\": \"deserunt eu incididunt nostrud\",\n  \"owner\": {\n    \"gender\": \"laboris ve\",\n    \"is_principal_driver\": true,\n    \"residential_address\": {\n      \"address\": \"anim Ut in\",\n      \"address_number\": \"sint elit aute et\",\n      \"city\": {\n        \"istat\": \"non ipsum proident\"\n      },\n      \"zip_code\": \"ad proi\"\n    },\n    \"first_name\": \"in non deserunt quis\",\n    \"last_name\": \"ad sint et\",\n    \"company_name\": \"reprehenderit\",\n    \"company_type\": \"anim nostrud sint\",\n    \"vat\": \"fugiat Duis velit\",\n    \"fiscal_code\": \"eiusmod in laboris in\",\n    \"birth_date\": \"1968-06-02\",\n    \"city_of_birth\": {\n      \"istat\": \"consectetur in laborum sed\"\n    },\n    \"country_of_birth\": \"au\",\n    \"home_address\": {\n      \"address\": \"cupidatat id veniam\",\n      \"address_number\": \"eiusmod\",\n      \"city\": {\n        \"istat\": \"laborum elit pariatur ut\"\n      },\n      \"zip_code\": \"consectetur nostrud\"\n    },\n    \"civil_status\": \"ea veniam eiusmod\",\n    \"qualification\": \"dolore Excepteur ad\",\n    \"occupation\": \"culpa\",\n    \"license_year\": \"laborum\"\n  },\n  \"quote_vehicle_type\": \"ad incididunt sed non\",\n  \"vehicle\": {\n    \"antitheft\": \"enim minim do est\",\n    \"finiture\": {\n      \"code\": \"id\",\n      \"month\": \"pariat\",\n      \"year\": \"incididunt Ut\"\n    },\n    \"plate_number\": \"aliquip laboris velit et\",\n    \"power_source\": \"officia\",\n    \"purchase_date\": \"1963-03-22\",\n    \"registration_date\": \"2017-03-09\",\n    \"third_party_usage\": true,\n    \"with_towbar\": false,\n    \"main_use\": \"eu dolore culpa\",\n    \"shelter\": \"adipisicing consequat\",\n    \"year_mileage\": \"laboris nulla occaecat\",\n    \"value\": \"proident magna mollit\",\n    \"mass_over_35q\": false\n  },\n  \"driver\": {\n    \"gender\": \"veniam commodo\",\n    \"is_principal_driver\": true,\n    \"residential_address\": {\n      \"address\": \"sed laborum consequat\",\n      \"address_number\": \"ex deserunt\",\n      \"city\": {\n        \"istat\": \"dolo\"\n      },\n      \"zip_code\": \"deserunt in\"\n    },\n    \"first_name\": \"culpa dolor\",\n    \"last_name\": \"proident Duis\",\n    \"company_name\": \"sit velit elit qui exercitation\",\n    \"company_type\": \"quis ea\",\n    \"vat\": \"dolor laborum elit\",\n    \"fiscal_code\": \"L\",\n    \"birth_date\": \"1956-03-07\",\n    \"city_of_birth\": {\n      \"istat\": \"in aliquip incididunt\"\n    },\n    \"country_of_birth\": \"sed\",\n    \"home_address\": {\n      \"address\": \"magna ea elit\",\n      \"address_number\": \"ad eu nulla ea\",\n      \"city\": {\n        \"istat\": \"anim f\"\n      },\n      \"zip_code\": \"exercitation\"\n    },\n    \"civil_status\": \"dolore tempor\",\n    \"qualification\": \"consectetur Lorem cupidatat aliqua\",\n    \"occupation\": \"Lorem sit labore ut\",\n    \"license_year\": \"sint culpa\"\n  },\n  \"youngest_driver_age\": -52753234,\n  \"atr\": {\n    \"cu_class\": \"cillum reprehenderit anim\",\n    \"details\": [\n      {\n        \"year\": -47184635,\n        \"primary_responsibility\": \"eiusmod fugiat occaecat dolore\",\n        \"equal_responsibility\": \"incididunt proident commodo l\",\n        \"no_responsibility\": \"pariatur ut enim\"\n      },\n      {\n        \"year\": 42027030,\n        \"primary_responsibility\": \"sint\",\n        \"equal_responsibility\": \"non laborum fugiat eu\",\n        \"no_responsibility\": \"esse sint in cupidatat\"\n      }\n    ],\n    \"previous_insurance_company\": -5389591\n  },\n  \"inherited_atr\": {\n    \"inheritance_type\": \"aliqua ut in\",\n    \"plate_number\": \"sint cupidatat dolor deserunt\",\n    \"vehicle_type\": \"adipisicing cupidatat id aute\",\n    \"inheritance_figure\": {\n      \"birth_date\": \"1985-11-22\",\n      \"country_of_birth\": \"proident irure reprehenderit nisi\",\n      \"first_name\": \"amet ex\",\n      \"fiscal_code\": \"cupidatat proident occaecat est aliqua\",\n      \"gender\": \"ullamco\",\n      \"last_name\": \"minim\",\n      \"city_of_birth\": {\n        \"istat\": \"anim\"\n      }\n    }\n  }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{baseUrl}}/api/quotes"
+					},
+					"status": "Unauthorized",
+					"code": 401,
+					"_postman_previewlanguage": "text",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "*/*"
+						}
+					],
+					"cookie": [],
+					"responseTime": null,
+					"body": ""
+				},
+				{
+					"id": "d38cc68d-571c-4ba2-a72e-99c2910663bf",
+					"name": "Not Found",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"description": "Added as a part of security scheme: apikey",
+								"key": "x-apikey",
+								"value": "<API Key>"
+							},
+							{
+								"description": "(Required) Quotation type (manual or automatic)",
+								"key": "X-Facile-QuoteTrigger",
+								"value": "adipisicing non"
+							},
+							{
+								"description": "(Required) Channel from which the request comes (web or fp)",
+								"key": "X-Facile-Channel",
+								"value": "adipisicing non"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"contractor\": {\n    \"gender\": \"sint in dolore q\",\n    \"is_principal_driver\": false,\n    \"residential_address\": {\n      \"address\": \"ad\",\n      \"address_number\": \"d\",\n      \"city\": {\n        \"istat\": \"magna enim est veniam\"\n      },\n      \"zip_code\": \"ut\"\n    },\n    \"first_name\": \"veniam ut pariatur ullamco sed\",\n    \"last_name\": \"nulla dolore eiusmod qui\",\n    \"company_name\": \"sint irure ipsu\",\n    \"company_type\": \"occaecat laborum Duis\",\n    \"vat\": \"Ut aute\",\n    \"fiscal_code\": \"irure reprehenderit aliqua\",\n    \"birth_date\": \"1951-11-25\",\n    \"city_of_birth\": {\n      \"istat\": \"laborum dolor enim \"\n    },\n    \"country_of_birth\": \"consectetur ut\",\n    \"home_address\": {\n      \"address\": \"id ut\",\n      \"address_number\": \"ad in ma\",\n      \"city\": {\n        \"istat\": \"aliquip nisi et\"\n      },\n      \"zip_code\": \"consectetur\"\n    },\n    \"civil_status\": \"ut\",\n    \"qualification\": \"pariatur elit enim aliquip\",\n    \"occupation\": \"elit\",\n    \"license_year\": \"velit laboris in sint\"\n  },\n  \"effective_date\": \"1988-08-03\",\n  \"insurance_type\": \"deserunt eu incididunt nostrud\",\n  \"owner\": {\n    \"gender\": \"laboris ve\",\n    \"is_principal_driver\": true,\n    \"residential_address\": {\n      \"address\": \"anim Ut in\",\n      \"address_number\": \"sint elit aute et\",\n      \"city\": {\n        \"istat\": \"non ipsum proident\"\n      },\n      \"zip_code\": \"ad proi\"\n    },\n    \"first_name\": \"in non deserunt quis\",\n    \"last_name\": \"ad sint et\",\n    \"company_name\": \"reprehenderit\",\n    \"company_type\": \"anim nostrud sint\",\n    \"vat\": \"fugiat Duis velit\",\n    \"fiscal_code\": \"eiusmod in laboris in\",\n    \"birth_date\": \"1968-06-02\",\n    \"city_of_birth\": {\n      \"istat\": \"consectetur in laborum sed\"\n    },\n    \"country_of_birth\": \"au\",\n    \"home_address\": {\n      \"address\": \"cupidatat id veniam\",\n      \"address_number\": \"eiusmod\",\n      \"city\": {\n        \"istat\": \"laborum elit pariatur ut\"\n      },\n      \"zip_code\": \"consectetur nostrud\"\n    },\n    \"civil_status\": \"ea veniam eiusmod\",\n    \"qualification\": \"dolore Excepteur ad\",\n    \"occupation\": \"culpa\",\n    \"license_year\": \"laborum\"\n  },\n  \"quote_vehicle_type\": \"ad incididunt sed non\",\n  \"vehicle\": {\n    \"antitheft\": \"enim minim do est\",\n    \"finiture\": {\n      \"code\": \"id\",\n      \"month\": \"pariat\",\n      \"year\": \"incididunt Ut\"\n    },\n    \"plate_number\": \"aliquip laboris velit et\",\n    \"power_source\": \"officia\",\n    \"purchase_date\": \"1963-03-22\",\n    \"registration_date\": \"2017-03-09\",\n    \"third_party_usage\": true,\n    \"with_towbar\": false,\n    \"main_use\": \"eu dolore culpa\",\n    \"shelter\": \"adipisicing consequat\",\n    \"year_mileage\": \"laboris nulla occaecat\",\n    \"value\": \"proident magna mollit\",\n    \"mass_over_35q\": false\n  },\n  \"driver\": {\n    \"gender\": \"veniam commodo\",\n    \"is_principal_driver\": true,\n    \"residential_address\": {\n      \"address\": \"sed laborum consequat\",\n      \"address_number\": \"ex deserunt\",\n      \"city\": {\n        \"istat\": \"dolo\"\n      },\n      \"zip_code\": \"deserunt in\"\n    },\n    \"first_name\": \"culpa dolor\",\n    \"last_name\": \"proident Duis\",\n    \"company_name\": \"sit velit elit qui exercitation\",\n    \"company_type\": \"quis ea\",\n    \"vat\": \"dolor laborum elit\",\n    \"fiscal_code\": \"L\",\n    \"birth_date\": \"1956-03-07\",\n    \"city_of_birth\": {\n      \"istat\": \"in aliquip incididunt\"\n    },\n    \"country_of_birth\": \"sed\",\n    \"home_address\": {\n      \"address\": \"magna ea elit\",\n      \"address_number\": \"ad eu nulla ea\",\n      \"city\": {\n        \"istat\": \"anim f\"\n      },\n      \"zip_code\": \"exercitation\"\n    },\n    \"civil_status\": \"dolore tempor\",\n    \"qualification\": \"consectetur Lorem cupidatat aliqua\",\n    \"occupation\": \"Lorem sit labore ut\",\n    \"license_year\": \"sint culpa\"\n  },\n  \"youngest_driver_age\": -52753234,\n  \"atr\": {\n    \"cu_class\": \"cillum reprehenderit anim\",\n    \"details\": [\n      {\n        \"year\": -47184635,\n        \"primary_responsibility\": \"eiusmod fugiat occaecat dolore\",\n        \"equal_responsibility\": \"incididunt proident commodo l\",\n        \"no_responsibility\": \"pariatur ut enim\"\n      },\n      {\n        \"year\": 42027030,\n        \"primary_responsibility\": \"sint\",\n        \"equal_responsibility\": \"non laborum fugiat eu\",\n        \"no_responsibility\": \"esse sint in cupidatat\"\n      }\n    ],\n    \"previous_insurance_company\": -5389591\n  },\n  \"inherited_atr\": {\n    \"inheritance_type\": \"aliqua ut in\",\n    \"plate_number\": \"sint cupidatat dolor deserunt\",\n    \"vehicle_type\": \"adipisicing cupidatat id aute\",\n    \"inheritance_figure\": {\n      \"birth_date\": \"1985-11-22\",\n      \"country_of_birth\": \"proident irure reprehenderit nisi\",\n      \"first_name\": \"amet ex\",\n      \"fiscal_code\": \"cupidatat proident occaecat est aliqua\",\n      \"gender\": \"ullamco\",\n      \"last_name\": \"minim\",\n      \"city_of_birth\": {\n        \"istat\": \"anim\"\n      }\n    }\n  }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{baseUrl}}/api/quotes"
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "text",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "*/*"
+						}
+					],
+					"cookie": [],
+					"responseTime": null,
+					"body": ""
+				},
+				{
+					"id": "27947613-23ca-4967-84a5-24b0cf885dc0",
+					"name": "Internal Server Error",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"description": "Added as a part of security scheme: apikey",
+								"key": "x-apikey",
+								"value": "<API Key>"
+							},
+							{
+								"description": "(Required) Quotation type (manual or automatic)",
+								"key": "X-Facile-QuoteTrigger",
+								"value": "adipisicing non"
+							},
+							{
+								"description": "(Required) Channel from which the request comes (web or fp)",
+								"key": "X-Facile-Channel",
+								"value": "adipisicing non"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"contractor\": {\n    \"gender\": \"sint in dolore q\",\n    \"is_principal_driver\": false,\n    \"residential_address\": {\n      \"address\": \"ad\",\n      \"address_number\": \"d\",\n      \"city\": {\n        \"istat\": \"magna enim est veniam\"\n      },\n      \"zip_code\": \"ut\"\n    },\n    \"first_name\": \"veniam ut pariatur ullamco sed\",\n    \"last_name\": \"nulla dolore eiusmod qui\",\n    \"company_name\": \"sint irure ipsu\",\n    \"company_type\": \"occaecat laborum Duis\",\n    \"vat\": \"Ut aute\",\n    \"fiscal_code\": \"irure reprehenderit aliqua\",\n    \"birth_date\": \"1951-11-25\",\n    \"city_of_birth\": {\n      \"istat\": \"laborum dolor enim \"\n    },\n    \"country_of_birth\": \"consectetur ut\",\n    \"home_address\": {\n      \"address\": \"id ut\",\n      \"address_number\": \"ad in ma\",\n      \"city\": {\n        \"istat\": \"aliquip nisi et\"\n      },\n      \"zip_code\": \"consectetur\"\n    },\n    \"civil_status\": \"ut\",\n    \"qualification\": \"pariatur elit enim aliquip\",\n    \"occupation\": \"elit\",\n    \"license_year\": \"velit laboris in sint\"\n  },\n  \"effective_date\": \"1988-08-03\",\n  \"insurance_type\": \"deserunt eu incididunt nostrud\",\n  \"owner\": {\n    \"gender\": \"laboris ve\",\n    \"is_principal_driver\": true,\n    \"residential_address\": {\n      \"address\": \"anim Ut in\",\n      \"address_number\": \"sint elit aute et\",\n      \"city\": {\n        \"istat\": \"non ipsum proident\"\n      },\n      \"zip_code\": \"ad proi\"\n    },\n    \"first_name\": \"in non deserunt quis\",\n    \"last_name\": \"ad sint et\",\n    \"company_name\": \"reprehenderit\",\n    \"company_type\": \"anim nostrud sint\",\n    \"vat\": \"fugiat Duis velit\",\n    \"fiscal_code\": \"eiusmod in laboris in\",\n    \"birth_date\": \"1968-06-02\",\n    \"city_of_birth\": {\n      \"istat\": \"consectetur in laborum sed\"\n    },\n    \"country_of_birth\": \"au\",\n    \"home_address\": {\n      \"address\": \"cupidatat id veniam\",\n      \"address_number\": \"eiusmod\",\n      \"city\": {\n        \"istat\": \"laborum elit pariatur ut\"\n      },\n      \"zip_code\": \"consectetur nostrud\"\n    },\n    \"civil_status\": \"ea veniam eiusmod\",\n    \"qualification\": \"dolore Excepteur ad\",\n    \"occupation\": \"culpa\",\n    \"license_year\": \"laborum\"\n  },\n  \"quote_vehicle_type\": \"ad incididunt sed non\",\n  \"vehicle\": {\n    \"antitheft\": \"enim minim do est\",\n    \"finiture\": {\n      \"code\": \"id\",\n      \"month\": \"pariat\",\n      \"year\": \"incididunt Ut\"\n    },\n    \"plate_number\": \"aliquip laboris velit et\",\n    \"power_source\": \"officia\",\n    \"purchase_date\": \"1963-03-22\",\n    \"registration_date\": \"2017-03-09\",\n    \"third_party_usage\": true,\n    \"with_towbar\": false,\n    \"main_use\": \"eu dolore culpa\",\n    \"shelter\": \"adipisicing consequat\",\n    \"year_mileage\": \"laboris nulla occaecat\",\n    \"value\": \"proident magna mollit\",\n    \"mass_over_35q\": false\n  },\n  \"driver\": {\n    \"gender\": \"veniam commodo\",\n    \"is_principal_driver\": true,\n    \"residential_address\": {\n      \"address\": \"sed laborum consequat\",\n      \"address_number\": \"ex deserunt\",\n      \"city\": {\n        \"istat\": \"dolo\"\n      },\n      \"zip_code\": \"deserunt in\"\n    },\n    \"first_name\": \"culpa dolor\",\n    \"last_name\": \"proident Duis\",\n    \"company_name\": \"sit velit elit qui exercitation\",\n    \"company_type\": \"quis ea\",\n    \"vat\": \"dolor laborum elit\",\n    \"fiscal_code\": \"L\",\n    \"birth_date\": \"1956-03-07\",\n    \"city_of_birth\": {\n      \"istat\": \"in aliquip incididunt\"\n    },\n    \"country_of_birth\": \"sed\",\n    \"home_address\": {\n      \"address\": \"magna ea elit\",\n      \"address_number\": \"ad eu nulla ea\",\n      \"city\": {\n        \"istat\": \"anim f\"\n      },\n      \"zip_code\": \"exercitation\"\n    },\n    \"civil_status\": \"dolore tempor\",\n    \"qualification\": \"consectetur Lorem cupidatat aliqua\",\n    \"occupation\": \"Lorem sit labore ut\",\n    \"license_year\": \"sint culpa\"\n  },\n  \"youngest_driver_age\": -52753234,\n  \"atr\": {\n    \"cu_class\": \"cillum reprehenderit anim\",\n    \"details\": [\n      {\n        \"year\": -47184635,\n        \"primary_responsibility\": \"eiusmod fugiat occaecat dolore\",\n        \"equal_responsibility\": \"incididunt proident commodo l\",\n        \"no_responsibility\": \"pariatur ut enim\"\n      },\n      {\n        \"year\": 42027030,\n        \"primary_responsibility\": \"sint\",\n        \"equal_responsibility\": \"non laborum fugiat eu\",\n        \"no_responsibility\": \"esse sint in cupidatat\"\n      }\n    ],\n    \"previous_insurance_company\": -5389591\n  },\n  \"inherited_atr\": {\n    \"inheritance_type\": \"aliqua ut in\",\n    \"plate_number\": \"sint cupidatat dolor deserunt\",\n    \"vehicle_type\": \"adipisicing cupidatat id aute\",\n    \"inheritance_figure\": {\n      \"birth_date\": \"1985-11-22\",\n      \"country_of_birth\": \"proident irure reprehenderit nisi\",\n      \"first_name\": \"amet ex\",\n      \"fiscal_code\": \"cupidatat proident occaecat est aliqua\",\n      \"gender\": \"ullamco\",\n      \"last_name\": \"minim\",\n      \"city_of_birth\": {\n        \"istat\": \"anim\"\n      }\n    }\n  }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{baseUrl}}/api/quotes"
+					},
+					"status": "Internal Server Error",
+					"code": 500,
+					"_postman_previewlanguage": "text",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "*/*"
+						}
+					],
+					"cookie": [],
+					"responseTime": null,
+					"body": ""
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "c59c75dc-8324-426b-a70e-7e5748ac560d",
+				"type": "text/javascript",
+				"exec": [
+					"function monthToN(month) {",
+					"    switch(month) {",
+					"        case \"Jan\":",
+					"            return \"01\"",
+					"        case \"Feb\":",
+					"            return \"02\"",
+					"        case \"Mar\":",
+					"            return \"03\"",
+					"        case \"Apr\":",
+					"            return \"04\"",
+					"        case \"May\":",
+					"            return \"05\"",
+					"        case \"Jun\":",
+					"            return \"06\"",
+					"        case \"Jul\":",
+					"            return \"07\"",
+					"        case \"Aug\":",
+					"            return \"08\"",
+					"        case \"Sep\":",
+					"            return \"09\"",
+					"        case \"Oct\":",
+					"            return \"10\"",
+					"        case \"Nov\":",
+					"            return \"11\"",
+					"        case \"Dec\":",
+					"            return \"12\"",
+					"        default:",
+					"            return \"01\"",
+					"    }",
+					"}",
+					"",
+					"function fixDates(key) {",
+					"    //keys is an array of keys with dates that needs to be fixed",
+					"    //fixing glitches in dates ",
+					"    console.log(\"date to fix:\" + key)",
+					"    dateString = key",
+					"    //console.log(\"inputString: \"+ dateString)",
+					"    //date = new Date(dateString)",
+					"    //date = new Date(\"1987-07-09\")",
+					"    date = new Date(key)",
+					"    //console.log(\"date: \"+ JSON.stringify(date))",
+					"    date.setDate(date.getDate() + 0);",
+					"    //date = date + 1 ",
+					"    dateString = JSON.stringify(date)",
+					"    dateString = dateString.substr(1,10)",
+					"    //console.log(\"dateStringInit: \" + dateString)",
+					"    console.log(\"date fixed: \" + dateString)",
+					"    return dateString",
+					"}",
+					"",
+					"",
+					"const postRequest = {",
+					"    'url': 'https://cognito-idp.eu-west-1.amazonaws.com/',",
+					"    'method': 'POST',",
+					"    'header': {",
+					"        'User-Agent': 'PostmanRuntime/7.29.0',",
+					"        'Accept': '*/*',",
+					"        'Accept-Encoding': 'gzip, deflate, br',",
+					"        'Connection': 'keep-alive',",
+					"        'X-Amz-Target': 'AWSCognitoIdentityProviderService.InitiateAuth',",
+					"        'Content-Type': 'application/x-amz-json-1.1'",
+					"    },",
+					"    'body': {",
+					"        'mode': 'raw',",
+					"        'raw': JSON.stringify({",
+					"            'AuthParameters': {",
+					"                'USERNAME': 'postman',",
+					"                \"PASSWORD\": 'eTmR8QWEuVZVedsp!'",
+					"            },",
+					"            \"AuthFlow\": \"USER_PASSWORD_AUTH\",",
+					"            \"ClientId\": \"7a2nff1m1ms4m0g438udgdbaka\"",
+					"        })",
+					"    }",
+					"};",
+					"//console.log(\"REQUEST: \" + JSON.stringify(postRequest))",
+					"pm.sendRequest(postRequest, (error, response) => {",
+					"    AccessToken = JSON.stringify(response.json().AuthenticationResult.AccessToken)",
+					"    //console.log(\"AccessToken: \" + AccessToken)",
+					"    pm.collectionVariables.set(\"AccessToken\", AccessToken.slice(1,-1))",
+					"    //console.log(\"Variable AccessoToken: \" + pm.collectionVariables.get(\"AccessToken\"));",
+					"});",
+					"console.log(\"Reading now mongoAPI\")",
+					"//now getting Facile last quote we have received",
+					"const mongoAPI = {",
+					"    'url': 'https://data.mongodb-api.com/app/data-gpdmd/endpoint/data/v1/action/findOne',",
+					"    'method': 'POST',",
+					"    'header': {",
+					"        'User-Agent': 'PostmanRuntime/7.29.0',",
+					"        'Accept': 'application/json',",
+					"        'api-key': 'QdVDCylfIhTKQr7gL0H1Rz6IvsD4yGq08iKk4v77ZKmYwhgbuZnj9Z6rXKHet68E',",
+					"        'Access-Control-Request-Headers': '*',",
+					"        'Content-Type': 'Content-Type'",
+					"    },",
+					"    'body': {",
+					"        'mode': 'raw',",
+					"        'raw': JSON.stringify({",
+					"            \"collection\":\"V_last_quote\",",
+					"            \"database\":\"dllbg_unicorn_quotations\",",
+					"            \"dataSource\":\"Cluster0\"",
+					"        })",
+					"    }",
+					"};",
+					"//console.log(\"REQUEST: \" + JSON.stringify(postRequest))",
+					"pm.sendRequest(mongoAPI, (error, response) => {",
+					"    quoteString = JSON.stringify(response.json())",
+					"    quoteObject = JSON.parse(quoteString)",
+					"    console.log(\"quoteObject retrieved\")",
+					"    ",
+					"    //fixing glitches in dates",
+					"    console.log(\"Fixing dates\")",
+					"    if (quoteObject.document.request.contractor.gender !== \"G\") {",
+					"        console.log(\"contractor.birth_date\")",
+					"        quoteObject.document.request.contractor.birth_date = fixDates(quoteObject.document.request.contractor.birth_date)",
+					"        console.log(\"owner.birth_date\")",
+					"        quoteObject.document.request.owner.birth_date = fixDates(quoteObject.document.request.owner.birth_date)",
+					"        console.log(\"driver.birth_date\")",
+					"        quoteObject.document.request.driver.birth_date = fixDates(quoteObject.document.request.driver.birth_date)",
+					"",
+					"    }",
+					"    console.log(\"effective_date\")",
+					"    quoteObject.document.request.effective_date = fixDates(quoteObject.document.request.effective_date)",
+					"    console.log(\"vehicle.registration_date\")",
+					"    quoteObject.document.request.vehicle.registration_date = fixDates(quoteObject.document.request.vehicle.registration_date)",
+					"    console.log(\"vehicle.purchase_date\")",
+					"    quoteObject.document.request.vehicle.purchase_date = fixDates(quoteObject.document.request.vehicle.purchase_date)",
+					"",
+					"    //console.log(\"quoteString: \" + quoteString)",
+					"    pm.collectionVariables.set(\"quoteString\", quoteString)",
+					"    //console.log(\"Variable facileRequest: \" + JSON.stringify(quoteObject.document.request));",
+					"    pm.collectionVariables.set(\"facileRequest\", JSON.stringify(quoteObject.document.request))",
+					"    pm.collectionVariables.set(\"sivi\", JSON.stringify(quoteObject.document.sivi_response.payload))",
+					"    //console.log(\"Variable sivi: \" + pm.collectionVariables.get(\"sivi\"));",
+					"});",
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "9f56ac65-a208-48c0-8859-b3d0dc41cb68",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "password",
+			"value": "eTmR8QWEuVZVedsp!"
+		},
+		{
+			"key": "user",
+			"value": "postman"
+		},
+		{
+			"key": "access_url",
+			"value": " https://cognito-idp.eu-west-1.amazonaws.com/eu-west-1_i9cY68vCe"
+		},
+		{
+			"key": "AccessToken",
+			"value": ""
+		},
+		{
+			"key": "quoteObject",
+			"value": ""
+		},
+		{
+			"key": "facileRequest",
+			"value": ""
+		},
+		{
+			"key": "sivi",
+			"value": ""
+		},
+		{
+			"key": "quoteString",
+			"value": ""
+		}
+	]
+}
