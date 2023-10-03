@@ -1,0 +1,58 @@
+{
+	"info": {
+		"_postman_id": "2755287a-09ed-42b5-9fb0-b68c3a60bc15",
+		"name": "503C UM MONITORING Infodrive CLOSURE",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Cash sheet closure INFODRIVE 903",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "13ba2a11-bfb2-4723-a41d-92236a9a7b62",
+						"exec": [
+							"// response status test",
+							"pm.test(\"API working!\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"id": "7d0f6ac7-9d96-4db0-addd-dddc8e48f12e",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "x-apikey",
+						"value": "ac47bee8-1c27-40a1-ba5c-6cd0a1b71521",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"agenzia\": \"903\"\n}"
+				},
+				"url": "https://lb-unicorn-manager-external.appfront.cloud:4443/infodrive/send-assistances"
+			},
+			"response": []
+		}
+	]
+}
