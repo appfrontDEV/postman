@@ -1,0 +1,111 @@
+{
+	"info": {
+		"_postman_id": "c6c76eff-477d-41c8-961f-2649758186d7",
+		"name": "503_A UM REINPSOL Send coverages",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Cash sheet closure ANIA 903",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "8c4b9889-6b44-4127-a31e-ba51d0510c4c",
+						"exec": [
+							"// response status test",
+							"pm.test(\"API working!\", function () {",
+							"    pm.response.to.have.status(201);",
+							"});",
+							"pm.test(\"Expected REINSOL batch file created\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"REINSOL batch file created\");",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"id": "df04d28b-f612-425f-8436-191c9615b23f",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "x-apikey",
+						"value": "ac47bee8-1c27-40a1-ba5c-6cd0a1b71521",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"agenzia\": \"903\"\n}"
+				},
+				"url": "https://lb-unicorn-manager-external.appfront.cloud:4443/reinpsol/create-batch-file"
+			},
+			"response": []
+		},
+		{
+			"name": "Cash sheet closure ANIA 987",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "8c4b9889-6b44-4127-a31e-ba51d0510c4c",
+						"exec": [
+							"// response status test",
+							"pm.test(\"API working!\", function () {",
+							"    pm.response.to.have.status(201);",
+							"});",
+							"pm.test(\"Expected REINSOL batch file created\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"REINSOL batch file created\");",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"id": "1d611a76-4d15-4b4a-aa6c-928a3ca292af",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "x-apikey",
+						"value": "ac47bee8-1c27-40a1-ba5c-6cd0a1b71521",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"agenzia\": \"987\"\n}"
+				},
+				"url": "https://lb-unicorn-manager-external.appfront.cloud:4443/reinpsol/create-batch-file"
+			},
+			"response": []
+		}
+	]
+}
