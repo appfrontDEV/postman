@@ -1,0 +1,73 @@
+{
+	"info": {
+		"_postman_id": "9b8df186-927c-4754-9811-a367380189f7",
+		"name": "504 Unicorn Manager MONITORING SEOUTSOL",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Read Seoutsol Batch File",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "8ad38a42-ad50-4a3d-a4ab-e095b58b5f29",
+						"exec": [
+							"// response status test\r",
+							"pm.test(\"API working!\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"id": "6542afe3-7f8c-4c0e-8e9e-e0aa779dcf55",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": "https://lb-unicorn-manager-external.appfront.cloud:4443/seoutsol/read-batch-file"
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "apikey",
+		"apikey": {
+			"value": "ac47bee8-1c27-40a1-ba5c-6cd0a1b71521",
+			"key": "x-apikey"
+		}
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "4319f3f6-bd3c-4b7d-9b04-23f981858de6",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "337ce042-fc89-4cd0-a828-5425576b66a0",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
