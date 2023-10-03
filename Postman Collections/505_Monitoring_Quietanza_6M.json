@@ -1,0 +1,223 @@
+{
+	"info": {
+		"_postman_id": "1f12b0d7-9eff-4000-990a-e5310229fa7e",
+		"name": "505 Monitoring Quietanza 6M",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Policies to be quiet",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "dfd81e57-d3d9-4290-afe0-ed8ffbd6866f",
+						"exec": [
+							"// response status test",
+							"pm.test(\"API working!\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"pm.test(\"Expected sales_chain\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"Procedure successfully completed\");",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"id": "5a5cf4cd-e850-449e-a549-374396650c7b",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "x-apikey",
+						"value": "{{x-apikey}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"date\": \"{{year}}-{{month}}-{{day}}\"\n}"
+				},
+				"url": "{{base_url_um}}/quietanza/save-policies-to-be-quiet"
+			},
+			"response": []
+		},
+		{
+			"name": "Quietanza Semetrale",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "f5f2c534-2efd-4440-baad-1c51ae19d1cf",
+						"exec": [
+							"// response status test",
+							"pm.test(\"API working!\", function () {",
+							"    pm.response.to.have.status(201);",
+							"});",
+							"pm.test(\"Expected sales_chain\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"Procedure successfully completed\");",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"id": "6f91cba9-55b0-4f72-ab1d-ed4e7584f2ca",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "x-apikey",
+						"value": "{{x-apikey}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"date\": \"{{year}}-{{month}}-{{day}}\"\n}"
+				},
+				"url": "{{base_url_um}}/quietanza/quietanzamento-semestrale"
+			},
+			"response": []
+		},
+		{
+			"name": "Quietanzamento",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "ef86c11b-b868-4eae-907e-e82866519659",
+						"exec": [
+							"// response status test",
+							"pm.test(\"API working!\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"pm.test(\"Expected sales_chain\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"foglioAmarea\");",
+							"});",
+							"console.log(pm.response.json());"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"id": "622eedfb-2496-4d80-923f-3e32ce291b48",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"date\": \"{{year}}-{{month}}-{{day}}\"\n}"
+				},
+				"url": "{{base_url_lg_local}}/api/v1/utilities/quietanza"
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "8fe15231-9ec8-4c53-8b13-8cdd3b5deee3",
+				"type": "text/javascript",
+				"exec": [
+					"//pm.collectionVariables.set(\"day\", pm.info.iteration + 1);",
+					"day = pm.collectionVariables.get(\"day\") + \"\";",
+					"if (day.length < 2) {",
+					"    day = \"0\" + day;",
+					"    pm.collectionVariables.set(\"day\",day);",
+					"}",
+					"console.log(\"Day: \" + day);"
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "b1cde50d-9de6-4c16-9830-3f438fe754c8",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url_lg",
+			"value": "http://lookinglass-dev.appfront.cloud:446",
+			"type": "string"
+		},
+		{
+			"key": "base_url_um",
+			"value": "http://unicorn-manager-dev.external.appfront.cloud:4001",
+			"type": "string"
+		},
+		{
+			"key": "base_url_lg_local",
+			"value": "http://localhost:8000",
+			"type": "string"
+		},
+		{
+			"key": "x-apikey",
+			"value": "79093013-0178-488c-877c-22ceb3de1c08",
+			"type": "string"
+		},
+		{
+			"key": "day",
+			"value": "3",
+			"type": "string"
+		},
+		{
+			"key": "month",
+			"value": "11",
+			"type": "string"
+		},
+		{
+			"key": "year",
+			"value": "2022",
+			"type": "string"
+		}
+	]
+}
