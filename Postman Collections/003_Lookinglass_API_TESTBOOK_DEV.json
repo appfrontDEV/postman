@@ -9893,6 +9893,76 @@
 						"url": "{{lookinglass}}/api/v1/dllbg/mtr/coverage"
 					},
 					"response": []
+				},
+				{
+					"name": "Reports ISSUE #2712",
+					"id": "6b57dba5-0779-4d59-84c4-de4b416f7937",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-Lookinglass-Channel",
+								"value": "web",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "X-debug",
+								"value": "true",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"data\": \"20230804\", \n\"targa\": \"*CY857PY\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{lookinglass}}/api/v1/dllbg/mtr/coverage"
+					},
+					"response": []
+				},
+				{
+					"name": "Reports ISSUE #2712 n2",
+					"id": "875c7d5f-fc3d-4781-aa8e-b0df838d0221",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-Lookinglass-Channel",
+								"value": "web",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "X-debug",
+								"value": "true",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"data\": \"20230804\", \n\"targa\": \"*DX818NX\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{lookinglass}}/api/v1/dllbg/mtr/coverage"
+					},
+					"response": []
 				}
 			],
 			"id": "a4f3e479-0bea-4ebc-a6af-63e2f7f4b010"
