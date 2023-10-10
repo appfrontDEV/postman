@@ -9963,6 +9963,41 @@
 						"url": "{{lookinglass}}/api/v1/dllbg/mtr/coverage"
 					},
 					"response": []
+				},
+				{
+					"name": "Reports ISSUE #2779",
+					"id": "cb87d58d-5645-4c43-80fc-1e32ecee3016",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-Lookinglass-Channel",
+								"value": "web",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "X-debug",
+								"value": "true",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"data\": \"20230724\", \n  \"targa\": \"*ER828RG\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{lookinglass}}/api/v1/dllbg/mtr/coverage"
+					},
+					"response": []
 				}
 			],
 			"id": "a4f3e479-0bea-4ebc-a6af-63e2f7f4b010"
