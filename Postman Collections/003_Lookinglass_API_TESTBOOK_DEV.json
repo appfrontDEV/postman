@@ -10124,6 +10124,24 @@
 			"id": "c67287d7-0709-4ea1-8f2f-328199e452e7"
 		},
 		{
+			"name": "Quotation Blacklisting",
+			"item": [
+				{
+					"name": "index",
+					"id": "92c763c2-9886-46b3-b339-797abae75ec0",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			],
+			"id": "b1fe90cf-dc1d-43b8-b818-b014670f677c"
+		},
+		{
 			"name": "ISSUE #1437",
 			"id": "87b85904-0ea0-4341-b8f3-985ef112f190",
 			"protocolProfileBehavior": {
