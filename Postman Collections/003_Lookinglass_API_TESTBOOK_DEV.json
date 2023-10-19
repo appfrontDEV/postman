@@ -10136,7 +10136,80 @@
 						"method": "GET",
 						"header": []
 					},
-					"response": []
+					"response": [
+						{
+							"id": "09a42e8a-8216-449b-9fff-e584f0e9b193",
+							"name": "422Unprocessable Content",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"note\": \"He's active anymore\",\r\n    \"active\": true,\r\n    \"targa\": \"bakjfkldnkdf\",\r\n    \"codice_fiscale\": \"bakjfkldnkdf\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{lookinglass}}/external/api/v1/dllbg/mtr/blacklist"
+							},
+							"status": "Unprocessable Content",
+							"code": 422,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 19 Oct 2023 14:14:14 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 19 Oct 2023 14:14:14 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.0.25"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "6000"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "5999"
+								},
+								{
+									"key": "phpdebugbar-id",
+									"value": "X81bc28728eebb0c471c665f39f348dce"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"message\": \"The given data was invalid.\",\n    \"errors\": {\n        \"codice_fiscale\": [\n            \"La codice fiscale è gia' presente nel database.\"\n        ]\n    }\n}"
+						}
+					]
 				}
 			],
 			"id": "b1fe90cf-dc1d-43b8-b818-b014670f677c"
