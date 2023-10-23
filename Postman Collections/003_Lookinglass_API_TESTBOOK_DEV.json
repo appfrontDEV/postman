@@ -8480,6 +8480,293 @@
 									"body": "{\n    \"message\": \"The given data was invalid.\",\n    \"errors\": {\n        \"amount\": [\n            \"The amount field is required.\"\n        ]\n    }\n}"
 								}
 							]
+						},
+						{
+							"name": "delete quotation",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "1e0959ee-dbdf-40c2-a8e9-f8a103eddec9",
+										"exec": [
+											"pm.test(\"Status code is 200\", function () {\r",
+											"    pm.response.to.have.status(200);\r",
+											"});\r",
+											"\r",
+											"pm.test(\"Schema is valid\", function () {\r",
+											"    var schema = {\r",
+											"        type: \"object\",\r",
+											"        properties: {\r",
+											"            id: {\r",
+											"                type: \"string\"\r",
+											"            },\r",
+											"            issueTime: {\r",
+											"                type: \"string\"\r",
+											"            },\r",
+											"            effectiveDate: {\r",
+											"                type: \"string\"\r",
+											"            },\r",
+											"            vehicle: {\r",
+											"                type: \"object\",\r",
+											"                properties: {\r",
+											"                    plateNumber: {\r",
+											"                        type: \"string\"\r",
+											"                    }\r",
+											"                },\r",
+											"                required: [\"plateNumber\"]\r",
+											"            }\r",
+											"        },\r",
+											"        required: [\"id\", \"issueTime\", \"effectiveDate\", \"vehicle\"],\r",
+											"    };\r",
+											"\r",
+											"    var response = pm.response.json();\r",
+											"    pm.expect(tv4.validate(response, schema)).to.be.true;\r",
+											"});\r",
+											"\r",
+											"\r",
+											"pm.test(\"Id should be a non-empty string\", function () {\r",
+											"    const responseData = pm.response.json();\r",
+											"\r",
+											"    pm.expect(responseData.id).to.be.a('string').and.to.have.lengthOf.at.least(1, \"Value should not be empty\");\r",
+											"});\r",
+											"\r",
+											"\r",
+											"pm.test(\"issueTime is in a valid date format\", function () {\r",
+											"    const responseData = pm.response.json();\r",
+											"\r",
+											"    pm.expect(responseData.issueTime).to.match(/^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}Z$/, \"issueTime should be in valid date format\");\r",
+											"});\r",
+											"\r",
+											"\r",
+											"pm.test(\"Vehicle object is present in the response\", function () {\r",
+											"    const responseData = pm.response.json();\r",
+											"\r",
+											"    pm.expect(responseData.vehicle).to.exist;\r",
+											"});\r",
+											"\r",
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"id": "c937a6c8-f638-433d-91c3-2175c48f08f0",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true,
+								"disabledSystemHeaders": {}
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "xEtnNWswHdkbV6ujJYxdlm6uJQ6aKQ0ZNMQk6cVwh82DSYOA69y8rSGol8HJ"
+									}
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n \"amount\" : 82512, // Titolo amount intval(titolo.premiolordo * 100)\r\n \"referenceId\" : \"64d3f4e438f8a464340611c5\", // it's the reference of the quotation we have sent to Facile\r\n \"paymentId\" : \"cd9bf84d-e92b-4843-b1e1-7e99cf6e3c43\" // this must be saved in the titolo\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "localhost:8000/api/v1/dllbg/mtr/renewals/facile/cash",
+								"description": "Api to cash renewal titolo after being accepted by facile.\n\nand update policy's data according to the renewal calculations and send the new policy's PDF to the user."
+							},
+							"response": [
+								{
+									"id": "9b57342f-6b50-43ad-a37d-e7790d1c6a80",
+									"name": "404 no renewal found",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n \"referenceId\" : \"64d3923a38f8a464340611ba\", // it's the reference of the quotation we have sent to Facile\r\n \"paymentId\" : \"cd9bf84d-e92b-4843-b1e1-7e99cf6e3c43\" // this must be saved in the titolo\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "localhost:8000/api/v1/dllbg/mtr/renewals/facile/cash"
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"name": "Content-Type",
+											"value": "application/json",
+											"description": "",
+											"type": "text"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n    \"message\": \"No Renewal Titoli Found For This Request\",\n    \"errors\": [\n        \"No Renewal Titoli Found For This Request\"\n    ]\n}"
+								},
+								{
+									"id": "025cbfc3-ecb2-43c6-8900-50fc36c8176b",
+									"name": "200 success",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n \"amount\" : 82512, // Titolo amount intval(titolo.premiolordo * 100)\r\n \"referenceId\" : \"64d3f4e438f8a464340611c5\", // it's the reference of the quotation we have sent to Facile\r\n \"paymentId\" : \"cd9bf84d-e92b-4843-b1e1-7e99cf6e3c43\" // this must be saved in the titolo\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "localhost:8000/api/v1/dllbg/mtr/renewals/facile/cash"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Host",
+											"value": "localhost:8000"
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 09 Aug 2023 21:36:59 GMT"
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 09 Aug 2023 21:36:59 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.0.25"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "X-RateLimit-Limit",
+											"value": "6000"
+										},
+										{
+											"key": "X-RateLimit-Remaining",
+											"value": "5999"
+										},
+										{
+											"key": "Vary",
+											"value": "Origin"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n    \"id\": \"64d3f4e438f8a464340611c5\",\n    \"issueTime\": \"2023-08-09T00:00:00.000Z\",\n    \"effectiveDate\": \"2022-07-27\",\n    \"vehicle\": {\n        \"plateNumber\": \"EA202JV\"\n    }\n}"
+								},
+								{
+									"id": "52dc667e-5689-4d5d-a189-0c97a3de14de",
+									"name": "422 Unprocessable Content",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n \"referenceId\" : \"64d3923a38f8a464340611ba\", // it's the reference of the quotation we have sent to Facile\r\n \"paymentId\" : \"cd9bf84d-e92b-4843-b1e1-7e99cf6e3c43\" // this must be saved in the titolo\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "localhost:8000/api/v1/dllbg/mtr/renewals/facile/cash"
+									},
+									"status": "Unprocessable Content",
+									"code": 422,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Host",
+											"value": "localhost:8000"
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 09 Aug 2023 21:39:54 GMT"
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 09 Aug 2023 21:39:54 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.0.25"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "X-RateLimit-Limit",
+											"value": "6000"
+										},
+										{
+											"key": "X-RateLimit-Remaining",
+											"value": "5999"
+										},
+										{
+											"key": "Vary",
+											"value": "Origin"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n    \"message\": \"The given data was invalid.\",\n    \"errors\": {\n        \"amount\": [\n            \"The amount field is required.\"\n        ]\n    }\n}"
+								}
+							]
 						}
 					],
 					"id": "51efff5c-93c2-4352-8e09-3c23499ddb0d"
