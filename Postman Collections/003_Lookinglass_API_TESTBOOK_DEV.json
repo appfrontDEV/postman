@@ -10417,11 +10417,36 @@
 					"name": "index",
 					"id": "92c763c2-9886-46b3-b339-797abae75ec0",
 					"protocolProfileBehavior": {
-						"disableBodyPruning": true
+						"disableBodyPruning": true,
+						"disabledSystemHeaders": {
+							"accept": true
+						}
 					},
 					"request": {
-						"method": "GET",
-						"header": []
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "KVVKQJl2nzFpGo0lhioNp3JObM9Z33KCPW7e9jI49Mk12IxvRmdTfUFCB43K"
+							}
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"note\": \"He's active anymore\",\r\n    \"active\": true,\r\n    \"targa\": \"GB499NZ\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{lookinglass}}/external/api/v1/dllbg/mtr/blacklist/04911190488"
 					},
 					"response": [
 						{
