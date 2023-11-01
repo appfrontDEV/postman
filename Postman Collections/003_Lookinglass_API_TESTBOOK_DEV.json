@@ -10412,7 +10412,7 @@
 					]
 				},
 				{
-					"name": "check coverage",
+					"name": "Nemesi check coverage",
 					"id": "f0327efb-0cee-49d9-921c-87f0bda07c6b",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
