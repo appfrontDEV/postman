@@ -10413,15 +10413,174 @@
 				},
 				{
 					"name": "Nemesi check coverage",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "5dbfbc0a-f1bf-448a-998d-2804b62a32e7",
+								"exec": [
+									"pm.test(\"Response data length is greater than zero\", function () {\r",
+									"    var responseData = pm.response.json();\r",
+									"    pm.expect(responseData.data).to.be.an('object').that.has.property('success');\r",
+									"    pm.expect(responseData.data).to.be.an('object').that.has.property('message');\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
 					"id": "f0327efb-0cee-49d9-921c-87f0bda07c6b",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
 					"request": {
 						"method": "GET",
-						"header": []
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"targa\": \"EY26974\",\r\n    \"data\": \"20231101\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{lookinglass}}/api/v1/dllbg/mtr/nemesi"
 					},
-					"response": []
+					"response": [
+						{
+							"id": "7bf4668a-406a-4d40-915e-a896bc007b5d",
+							"name": "200 covered check coverage",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"targa\": \"EY26974\",\r\n    \"data\": \"20231101\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{lookinglass}}/api/v1/dllbg/mtr/nemesi"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 01 Nov 2023 16:30:21 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 01 Nov 2023 16:30:21 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.0.25"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "6000"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "5999"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"data\": {\n        \"success\": true,\n        \"message\": \"covered\"\n    }\n}"
+						},
+						{
+							"id": "cc368a7d-cb23-4194-b0b6-2d7fb2398bcc",
+							"name": "404 Not Found",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"targa\": \"EY26974\",\r\n    \"data\": \"20231101\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{lookinglass}}/api/v1/dllbg/mtr/nemesii"
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 01 Nov 2023 16:34:08 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 01 Nov 2023 16:34:08 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.0.25"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "6000"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "5998"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"message\": \"Unknown coverage type check. Only nemesi/infodrive are allowed\",\n    \"errors\": null\n}"
+						}
+					]
 				}
 			],
 			"id": "c67287d7-0709-4ea1-8f2f-328199e452e7"
