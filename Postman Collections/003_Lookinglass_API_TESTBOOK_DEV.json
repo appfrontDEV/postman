@@ -8572,14 +8572,14 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n \"amount\" : 82512, // Titolo amount intval(titolo.premiolordo * 100)\r\n \"referenceId\" : \"64d3f4e438f8a464340611c5\", // it's the reference of the quotation we have sent to Facile\r\n \"paymentId\" : \"cd9bf84d-e92b-4843-b1e1-7e99cf6e3c43\" // this must be saved in the titolo\r\n}",
+									"raw": "{\r\n    /**\r\n    * if not found nr_polizza, the api will get all renewal titoli for the date provided.\r\n    */\r\n    \"policy_id\": \"9871313208512\" // optional\r\n    /**\r\n    * if not found date, the api will get all renewal titoli for date of 30 days from now.\r\n    */\r\n    // \"date\": \"11-10-2023\" // optional\r\n\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
 										}
 									}
 								},
-								"url": "localhost:8000/api/v1/dllbg/mtr/renewals/facile/cash",
+								"url": "{{lookinglass}}/api/v1/dllbg/mtr/renewals/facile/deleteQuotation",
 								"description": "Api to cash renewal titolo after being accepted by facile.\n\nand update policy's data according to the renewal calculations and send the new policy's PDF to the user."
 							},
 							"response": [
