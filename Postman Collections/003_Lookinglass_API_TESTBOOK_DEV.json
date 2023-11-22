@@ -11436,75 +11436,91 @@
 	],
 	"variable": [
 		{
+			"id": "a8fac66c-f6e1-4a49-9722-2258a9ef9c8e",
 			"key": "base_url_local",
 			"value": "http://localhost:8000"
 		},
 		{
+			"id": "e426b065-3290-4587-bf7f-03d926095816",
 			"key": "base_url",
 			"value": "https://lookinglass-dev.appfront.cloud"
 		},
 		{
+			"id": "3ef1d5f7-f339-470e-88be-55a36360ab06",
 			"key": "base_url_api_gateway",
 			"value": "https://api.appfront.cloud/lookinglass/unsecure"
 		},
 		{
+			"id": "917672af-037a-41c6-91d2-d782c3004477",
 			"key": "base_url_staging",
 			"value": "https://unicorn006.appfront.cloud"
 		},
 		{
+			"id": "eaea304a-f403-4f7a-bfaf-cc44aa38b8df",
 			"key": "base_url_prod",
 			"value": "http://lookinglass01.ipagency.it"
 		},
 		{
+			"id": "c5381bfb-3cdf-43b4-9735-36f6bc9c5813",
 			"key": "base_url_plain",
 			"value": "http://lookinglass-dev.appfront.cloud:446",
 			"type": "string"
 		},
 		{
+			"id": "531bea2b-c820-482e-90a8-2cd3da88e8ef",
 			"key": "prod_url_lg",
 			"value": "https://lb-unicorn-manager-external.appfront.cloud:4442",
 			"type": "string"
 		},
 		{
+			"id": "34a188f5-2f40-4afc-b61e-4fb044783cdb",
 			"key": "AccessToken",
 			"value": "",
 			"type": "string"
 		},
 		{
+			"id": "1f851f02-9550-4b5b-911c-07cc024d9bcc",
 			"key": "CardIdSinistro",
 			"value": "",
 			"type": "string"
 		},
 		{
+			"id": "a5d9d898-2dc0-4b46-badb-c0e464ce29e1",
 			"key": "CardTipoVeicolo1",
 			"value": "",
 			"type": "string"
 		},
 		{
+			"id": "0e1f1c10-1f94-4b86-916c-435c94fd42fd",
 			"key": "CardTipoVeicolo2",
 			"value": "",
 			"type": "string"
 		},
 		{
+			"id": "99a4415e-eb28-40f3-91ea-84511b031c9e",
 			"key": "CardTargaVeicolo1",
 			"value": "",
 			"type": "string"
 		},
 		{
+			"id": "913faff7-f867-4673-aba7-a9fcc4e9bcb2",
 			"key": "CardTargaVeicolo2",
 			"value": "",
 			"type": "string"
 		},
 		{
+			"id": "dbfd044d-5ed0-46ed-a204-f6ca7e55385a",
 			"key": "CardDataSinistro",
 			"value": "",
 			"type": "string"
 		},
 		{
+			"id": "c4fb5432-85e6-40f0-b1a4-137b1ba7bb0f",
 			"key": "lookinglass",
 			"value": ""
 		},
 		{
+			"id": "81defdee-4b15-455a-b102-d4faca0a127a",
 			"key": "facile_date",
 			"value": ""
 		}
