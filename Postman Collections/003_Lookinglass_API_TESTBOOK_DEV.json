@@ -11436,91 +11436,91 @@
 	],
 	"variable": [
 		{
-			"id": "7ec0f0a4-84d4-4da0-ac05-02e9bd5fb54e",
+			"id": "08712c15-31cf-4385-8e5c-9f685d03cd4d",
 			"key": "base_url_local",
 			"value": "http://localhost:8000"
 		},
 		{
-			"id": "1afd024b-cca4-4511-a3bf-12392d044f7f",
+			"id": "0b3df47a-8ebf-4097-b23f-5e6cbd382f36",
 			"key": "base_url",
 			"value": "https://lookinglass-dev.appfront.cloud"
 		},
 		{
-			"id": "124c7c7a-5ef5-47aa-8e49-47d20187260e",
+			"id": "c04ed078-868f-459e-9150-ed2298824c06",
 			"key": "base_url_api_gateway",
 			"value": "https://api.appfront.cloud/lookinglass/unsecure"
 		},
 		{
-			"id": "2152392e-531d-47c5-aea8-2e2d85e17880",
+			"id": "de8bb9ee-a7ba-4d5a-b441-3f72ec40bb28",
 			"key": "base_url_staging",
 			"value": "https://unicorn006.appfront.cloud"
 		},
 		{
-			"id": "9edb27f4-132a-4e38-9738-83e79bdef877",
+			"id": "de041df0-3592-4090-8465-044a79e2b39c",
 			"key": "base_url_prod",
 			"value": "http://lookinglass01.ipagency.it"
 		},
 		{
-			"id": "ea21ef70-a2d4-47d1-b163-09a34a8cd611",
+			"id": "0ab0128d-9df5-4238-a587-d68a9f58f747",
 			"key": "base_url_plain",
 			"value": "http://lookinglass-dev.appfront.cloud:446",
 			"type": "string"
 		},
 		{
-			"id": "7af0b5fa-4737-45d4-8d80-ba10aa76da33",
+			"id": "086e6978-34a7-46a3-964e-f91c45735c2c",
 			"key": "prod_url_lg",
 			"value": "https://lb-unicorn-manager-external.appfront.cloud:4442",
 			"type": "string"
 		},
 		{
-			"id": "771c5d55-4e16-46e5-a333-366acbdfd9d0",
+			"id": "3134c74f-3baa-43b6-807d-bcd412b6081e",
 			"key": "AccessToken",
 			"value": "",
 			"type": "string"
 		},
 		{
-			"id": "0feb798c-d309-4201-acf2-1d622d86bece",
+			"id": "0e162e2c-f111-4a1e-96ea-d5e0136d64af",
 			"key": "CardIdSinistro",
 			"value": "",
 			"type": "string"
 		},
 		{
-			"id": "6adaa93a-f0ac-411c-af45-d13bc703a1ee",
+			"id": "f0b63500-60a8-4795-a3b3-089e4b0fad53",
 			"key": "CardTipoVeicolo1",
 			"value": "",
 			"type": "string"
 		},
 		{
-			"id": "4c973a25-65d6-4ffb-9665-b19d49e23208",
+			"id": "faaba389-5862-4434-b11b-10a4d484100f",
 			"key": "CardTipoVeicolo2",
 			"value": "",
 			"type": "string"
 		},
 		{
-			"id": "477b9a22-54a0-4066-b84c-830f7b3c6e36",
+			"id": "2e4bae88-8ef4-4d18-b1f9-1d42f5c17c8f",
 			"key": "CardTargaVeicolo1",
 			"value": "",
 			"type": "string"
 		},
 		{
-			"id": "b3e401f6-a842-4f34-af0a-1eed5787c3ca",
+			"id": "35e3968a-604b-4acd-a3bd-95436a5d6a55",
 			"key": "CardTargaVeicolo2",
 			"value": "",
 			"type": "string"
 		},
 		{
-			"id": "ca95a4d2-28a9-48af-885a-b2c9d2caf460",
+			"id": "664fc74d-2738-46b7-bff3-8c21763de4c9",
 			"key": "CardDataSinistro",
 			"value": "",
 			"type": "string"
 		},
 		{
-			"id": "469e47c6-9962-4479-8ec0-60e4801fa266",
+			"id": "93ff63ab-1773-4ce9-b475-63283ce2baa2",
 			"key": "lookinglass",
 			"value": ""
 		},
 		{
-			"id": "7934ba5f-a383-48f9-9609-c20f359d3437",
+			"id": "6726d690-236b-4d70-88d1-1d903ca4cbb6",
 			"key": "facile_date",
 			"value": ""
 		}
