@@ -11362,6 +11362,34 @@
 			"response": []
 		},
 		{
+			"name": "Company profile",
+			"id": "b32fbd19-234b-4c5b-8a5b-1a89691177c2",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"codice_intermediario\": \"478_GA\",\n    \"province\": \"LO\",\n    \"product_code\": \"GO_ASSISTANCE_TRUCK\"\n}"
+				},
+				"url": "{{lookinglass}}/api/v1/profile/company"
+			},
+			"response": []
+		},
+		{
 			"name": "API-APP execute-rule-operator",
 			"id": "25a5c6aa-1081-4e05-87a2-1cb89e325c4e",
 			"protocolProfileBehavior": {
